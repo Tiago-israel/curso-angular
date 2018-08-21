@@ -3,57 +3,13 @@
     {
       "endereco": {
         "rua": "rua X",
-        "bairro": "Bairro X",
-        "numero": 100
-      },
-      "nome": "tiago",
-      "email": "tiago@gmail.com",
-      "dataNascimento": "2018-08-15",
-      "id": 1
-    },
-    {
-      "endereco": {
-        "rua": "rua X",
-        "numero": 1000,
-        "bairro": "Bairro X"
-      },
-      "nome": "julia",
-      "email": "julia@gmail.com",
-      "dataNascimento": "2018-08-15",
-      "id": 2
-    },
-    {
-      "endereco": {
-        "rua": "rua X",
         "numero": 100,
         "bairro": "Bairro X"
       },
-      "nome": "ana",
-      "email": "julia@gmail.com",
-      "dataNascimento": "2018-08-14",
-      "id": 3
-    },
-    {
-      "endereco": {
-        "rua": "rua X",
-        "numero": 122,
-        "bairro": "Bairro X"
-      },
-      "nome": "jack",
-      "email": "jack@gmail.com",
-      "dataNascimento": "2018-08-13",
-      "id": 4
-    },
-    {
-      "endereco": {
-        "rua": "sdsd",
-        "numero": 2,
-        "bairro": "sdsd"
-      },
-      "nome": "ddsds",
-      "email": "dsdsdsd",
-      "dataNascimento": "2018-07-31",
-      "id": 5
+      "nome": "tiago israel",
+      "email": "tiago@gmail.com",
+      "dataNascimento": "2018-08-28",
+      "id": 1
     }
   ]
 }

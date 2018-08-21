@@ -1,3 +1,4 @@
+import { AppRouting } from './app.routing';
 import { PessoaService } from './pessoas/services/pessoas.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,8 @@ import { CadastroPessoasComponent } from './pessoas/components/cadastro-pessoas/
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRouting
   ],
   providers: [
   ],
