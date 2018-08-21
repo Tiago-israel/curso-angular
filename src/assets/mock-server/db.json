@@ -1,15 +1,3 @@
 {
-  "pessoas": [
-    {
-      "endereco": {
-        "rua": "rua X",
-        "numero": 100,
-        "bairro": "Bairro X"
-      },
-      "nome": "tiago israel",
-      "email": "tiago@gmail.com",
-      "dataNascimento": "2018-08-28",
-      "id": 1
-    }
-  ]
+  "pessoas": []
 }
