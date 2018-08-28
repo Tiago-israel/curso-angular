@@ -1,3 +1,4 @@
+import { MenuComponent } from './menu/menu.component';
 import { AppRouting } from './app.routing';
 import { PessoaService } from './pessoas/services/pessoas.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,7 +14,8 @@ import { CadastroPessoasComponent } from './pessoas/components/cadastro-pessoas/
   declarations: [
     AppComponent,
     ListarPessoasComponent,
-    CadastroPessoasComponent
+    CadastroPessoasComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
