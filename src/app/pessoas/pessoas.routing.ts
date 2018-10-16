@@ -1,3 +1,4 @@
+import { PessoasResolver } from './resolvers/pessoas-resolver';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { ListarPessoasComponent } from "./components/listar-pessoas/listar-pessoas.component";
@@ -8,6 +9,9 @@ export const pessoasRoutes: Routes = [
     {
         path: '',
         component: ListarPessoasComponent,
+        resolve: {
+            pessoas: PessoasResolver
+        }
     },
     {
         path: 'novo',

@@ -13,14 +13,22 @@ import { ActivatedRoute, Router } from '../../../../../node_modules/@angular/rou
 export class ListarPessoasComponent implements OnInit {
 
   public pessoas$: Observable<Array<Pessoa>>;
+  public pessoas: Array<Pessoa>;
 
   public constructor(
     private pessoaService: PessoaService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   public ngOnInit() {
-    this.pessoas$ = this.pessoaService.buscarTodos();
+
+    this.route.data.subscribe(
+      (data: { pessoas: Array<Pessoa> }) => {
+        this.pessoas = data.pessoas;
+      }
+    );
+
   }
 
   public editar(id: number): void {

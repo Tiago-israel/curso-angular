@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { AppRouting } from './app.routing';
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRouting
   ],
   providers: [],
