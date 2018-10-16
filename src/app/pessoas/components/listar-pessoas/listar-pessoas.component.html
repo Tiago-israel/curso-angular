@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <div class="row">
-    <div class="table-responsive">
+    <div class="table-responsive" *ngIf="pessoas$ | async as pessoasList; else loading">
       <table class="table table-bordered table-striped">
         <thead>
           <th>Nome</th>
@@ -9,7 +9,7 @@
           <th>Ações</th>
         </thead>
         <tbody>
-          <tr *ngFor="let pessoa of pessoas | async">
+          <tr *ngFor="let pessoa of pessoasList">
             <td [innerHtml]="pessoa.nome"></td>
             <td [innerHtml]="pessoa.email"></td>
             <td [innerHtml]="pessoa.dataNascimento | date:'dd/MM/yyyy'"></td>
@@ -22,5 +22,8 @@
         </tbody>
       </table>
     </div>
+    <ng-template #loading>
+      <b>Carregando...</b>
+    </ng-template>
   </div>
 </div>

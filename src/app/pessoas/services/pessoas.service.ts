@@ -2,16 +2,19 @@ import { Pessoa } from './../models/pessoa';
 import { Injectable } from "../../../../node_modules/@angular/core";
 import { HttpClient } from "../../../../node_modules/@angular/common/http";
 import { Observable } from "../../../../node_modules/rxjs";
+import { delay, map } from "../../../../node_modules/rxjs/operators";
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class PessoaService {
 
     private readonly baseUrl: string = `http://localhost:3000/pessoas`;
 
     public constructor(private http: HttpClient) { }
 
-    public buscarTodos(): Observable<Array<Pessoa>> {
-        return this.http.get<Array<Pessoa>>(this.baseUrl);
+    public buscarTodos() {
+        return this.http.get<Array<Pessoa>>(this.baseUrl).pipe(delay(1000)).pipe(map(x => x));
     }
 
     public buscarPorId(id: number): Observable<Pessoa> {

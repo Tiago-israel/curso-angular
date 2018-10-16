@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '../../../../../node_modules/@angular/rou
 })
 export class ListarPessoasComponent implements OnInit {
 
-  public pessoas: Observable<Array<Pessoa>>;
+  public pessoas$: Observable<Array<Pessoa>>;
 
   public constructor(
     private pessoaService: PessoaService,
@@ -20,21 +20,21 @@ export class ListarPessoasComponent implements OnInit {
   ) { }
 
   public ngOnInit() {
-    this.pessoas = this.pessoaService.buscarTodos();
+    this.pessoas$ = this.pessoaService.buscarTodos();
   }
 
   public editar(id: number): void {
-    this.router.navigate([`pessoas/editar/${id}`]);
+    this.router.navigate([`/pessoas/editar/${id}`]);
   }
 
   public detalhar(id: number): void {
-    this.router.navigate([`pessoas/detalhes/${id}`]);
+    this.router.navigate([`/pessoas/detalhes/${id}`]);
   }
 
   public excluir(id: number): void {
     this.pessoaService.excluir(id).subscribe(
       () => {
-        this.pessoas = this.pessoaService.buscarTodos();
+        this.pessoas$ = this.pessoaService.buscarTodos();
       }
     )
   }
