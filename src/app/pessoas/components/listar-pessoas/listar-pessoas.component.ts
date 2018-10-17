@@ -22,7 +22,7 @@ export class ListarPessoasComponent implements OnInit {
   ) { }
 
   public ngOnInit() {
-
+    this.pessoas$ = this.pessoaService.buscarTodos();
     this.route.data.subscribe(
       (data: { pessoas: Array<Pessoa> }) => {
         this.pessoas = data.pessoas;
